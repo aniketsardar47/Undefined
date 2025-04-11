@@ -3,17 +3,20 @@ import reactLogo from './assets/react.svg'
 
 import viteLogo from '/vite.svg'
 import './App.css'
+import MentorProfile from './login/MentorProfile';
 
-import JoySignInSideTemplate from './login/JoySignInSide'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
- <JoySignInSideTemplate />
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/mentor-profile" element={<MentorProfile />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App
